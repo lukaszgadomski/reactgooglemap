@@ -84,6 +84,7 @@ const FactorySpyMaker = googleMapApi => {
     }
     remove() {
       if (this.root) {
+        googleMapApi.event.removeDomListener(this.root, "click");
         this.root.parentNode.removeChild(this.div);
         this.root = null;
       }
@@ -114,8 +115,8 @@ class InfoWindowContent extends React.Component {
         <div className="info-window-address">{address}</div>
         <table className="info-window-address-hours">
           <tbody>
-            {hours.map(({ day, hours }) => (
-              <tr>
+            {hours.map(({ day, hours }, i) => (
+              <tr key={i}>
                 <td>{day}</td>
                 <td>{hours}</td>
               </tr>
@@ -137,8 +138,6 @@ export class GoogleMap extends React.Component {
     const self = this;
     this.markersOnMap = {};
     markers.forEach((marker, i) => {
-      // const marker = markers[0];
-
       const { lat, lng } = marker;
       this.markersOnMap[marker.id] = self.markerFactory.create(
         new this.googleMapApi.LatLng(lat, lng),
@@ -160,6 +159,7 @@ export class GoogleMap extends React.Component {
       this.infowindow =
         this.infowindow ||
         new this.googleMapApi.InfoWindow({
+          maxWidth: 340,
           map: this.map,
           marker: this.markersOnMap[infowindow.id]
         });
@@ -179,6 +179,11 @@ export class GoogleMap extends React.Component {
     if (map.markers.length) {
       this.addMarkers(map.markers);
     }
+  }
+  componentDidUnMount() {
+    this.markersOnMap.forEach(marker => {
+      marker.remove();
+    });
   }
 
   //if markers are loaded after component mount

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "./actions";
 import { apiAddress } from "../../api";
-import store from "../../store";
+
 import Address from "./address";
 import AsyncComponent from "../async";
 import "./style.css";
@@ -52,7 +52,7 @@ const SelectableAddressList = connect(mapStateToProps, mapDispatchToProps)(
   Addresses
 );
 
-const asyncLoader = () => {
+const asyncLoader = store => {
   return apiAddress.fetch(store).then(() => {
     return SelectableAddressList;
   });

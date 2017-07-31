@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 import Placeholder from "../placeholder";
 
 export default class AsyncComponent extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
       Component: null
     };
   }
 
   componentDidMount() {
-    this.props.loader().then(Component => {
+    this.props.loader(this.context.store).then(Component => {
       this.setState({ Component });
     });
   }
@@ -39,4 +39,8 @@ AsyncComponent.propTypes = {
   loader: PropTypes.func,
   placeholderHeight: PropTypes.number,
   renderPlaceholder: PropTypes.func
+};
+
+AsyncComponent.contextTypes = {
+  store: PropTypes.object.isRequired
 };
