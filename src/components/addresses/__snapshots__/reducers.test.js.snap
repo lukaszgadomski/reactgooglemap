@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todos reducer should handle CLICK_ADDRESS 1`] = `
+Object {
+  "list": Array [],
+  "selected": Object {
+    "address": "Warszawa, ul. Grzybowska 37",
+    "hours": Array [
+      Object {
+        "day": "Niedziela",
+        "hours": "brak danych",
+      },
+      Object {
+        "day": "Poniedziałek",
+        "hours": "10:00 - 19:00",
+      },
+      Object {
+        "day": "Wtorek",
+        "hours": "10:00 - 19:00",
+      },
+      Object {
+        "day": "Środa",
+        "hours": "10:00 - 19:00",
+      },
+      Object {
+        "day": "Czwartek",
+        "hours": "10:00 - 19:00",
+      },
+      Object {
+        "day": "Piątek",
+        "hours": "10:00 - 19:00",
+      },
+      Object {
+        "day": "Sobota",
+        "hours": "brak danych",
+      },
+    ],
+    "id": 1,
+    "lat": "52.2351646",
+    "lng": "20.9942039",
+    "name": "Alsen",
+  },
+}
+`;

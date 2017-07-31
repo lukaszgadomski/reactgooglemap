@@ -1,0 +1,17 @@
+.addresses {
+    position: relative;
+    width: 50%;
+    left: 0;
+    top: 0;
+    display: block;
+}
+
+.address {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.address.selected {
+    background: #d7d7d7;
+    cursor: auto;
+}

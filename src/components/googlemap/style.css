@@ -1,0 +1,83 @@
+.map-container {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+.marker {
+    background: #ffffff;
+    border: 1px solid #c8c8c8;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    opacity: 1;
+}
+
+.marker img {
+    position: absolute;
+    margin-top: 2px;
+    visibility: hidden;
+}
+
+.map {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    background: #f3f3f3;
+    bottom: 0;
+    left: 50%;
+    margin-left: -7px;
+}
+
+.arrow:before, .arrow:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+}
+
+.arrow:before {
+    bottom: -7px;
+    border-top-color: #c8c8c8;
+    border-width: 7px;
+}
+
+.arrow:after {
+    bottom: -6px;
+    border-top-color: #ffffff;
+    border-width: 6px;
+}
+
+.info-window-logo {
+    float: left;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.info-window-name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.info-window-address {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #c8c8c8;
+    clear: both;
+}
+
+.info-window-logo img {
+    display: block;
+    max-height: 30px;
+    margin-right: 10px;
+    max-width: 120px;
+}

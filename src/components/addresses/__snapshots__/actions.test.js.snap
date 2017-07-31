@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`async fetch actions creates correct actions on address api fetch 1`] = `
+Array [
+  Object {
+    "fetching": true,
+    "type": "FETCH_REQUEST_ADDRESS",
+  },
+  Object {
+    "addresses": Array [
+      Object {
+        "address": "Warszawa, ul. Grzybowska 37",
+        "hours": Array [
+          Object {
+            "day": "Niedziela",
+            "hours": "brak danych",
+          },
+          Object {
+            "day": "Poniedziałek",
+            "hours": "10:00 - 19:00",
+          },
+          Object {
+            "day": "Wtorek",
+            "hours": "10:00 - 19:00",
+          },
+          Object {
+            "day": "Środa",
+            "hours": "10:00 - 19:00",
+          },
+          Object {
+            "day": "Czwartek",
+            "hours": "10:00 - 19:00",
+          },
+          Object {
+            "day": "Piątek",
+            "hours": "10:00 - 19:00",
+          },
+          Object {
+            "day": "Sobota",
+            "hours": "brak danych",
+          },
+        ],
+        "icon": "https://static.okazjum.pl/storage/okazjum/uploads/uploads/contractor/logo/6/s3_logo_alsen_siec-handlowa.jpg",
+        "id": 1,
+        "lat": "52.2351646",
+        "lng": "20.9942039",
+        "name": "Alsen",
+      },
+      Object {
+        "address": "Warszawa, al. Jana Pawła II 52/54",
+        "hours": Array [
+          Object {
+            "day": "Niedziela",
+            "hours": "24h",
+          },
+          Object {
+            "day": "Poniedziałek",
+            "hours": "24h",
+          },
+          Object {
+            "day": "Wtorek",
+            "hours": "24h",
+          },
+          Object {
+            "day": "Środa",
+            "hours": "24h",
+          },
+          Object {
+            "day": "Czwartek",
+            "hours": "24h",
+          },
+          Object {
+            "day": "Piątek",
+            "hours": "24h",
+          },
+          Object {
+            "day": "Sobota",
+            "hours": "24h",
+          },
+        ],
+        "icon": "https://static.okazjum.pl/storage/okazjum/uploads/uploads/contractor/logo/120/s3_logo_apteka1_siec-handlowa.jpg",
+        "id": 2,
+        "lat": "52.2446115",
+        "lng": "20.9919215",
+        "name": "Apteka1",
+      },
+    ],
+    "fetching": false,
+    "markers": Array [
+      Object {
+        "icon": "https://static.okazjum.pl/storage/okazjum/uploads/uploads/contractor/logo/6/s3_logo_alsen_siec-handlowa.jpg",
+        "id": 1,
+        "lat": "52.2351646",
+        "lng": "20.9942039",
+      },
+      Object {
+        "icon": "https://static.okazjum.pl/storage/okazjum/uploads/uploads/contractor/logo/120/s3_logo_apteka1_siec-handlowa.jpg",
+        "id": 2,
+        "lat": "52.2446115",
+        "lng": "20.9919215",
+      },
+    ],
+    "type": "FETCH_SUCCESS_ADDRESS",
+  },
+]
+`;
+
+exports[`synchronous map actions should create action fetch address 1`] = `
+Object {
+  "fetching": true,
+  "type": "FETCH_REQUEST_ADDRESS",
+}
+`;
+
+exports[`synchronous map actions should create action fetch error address 1`] = `
+Object {
+  "err": "Timeout",
+  "fetching": false,
+  "type": "FETCH_ERROR_ADDRESS",
+}
+`;
+
+exports[`synchronous map actions should create action fetch success address 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "Warszawa, ul. Grzybowska 37",
+      "hours": Array [
+        Object {
+          "day": "Niedziela",
+          "hours": "brak danych",
+        },
+        Object {
+          "day": "Poniedziałek",
+          "hours": "10:00 - 19:00",
+        },
+        Object {
+          "day": "Wtorek",
+          "hours": "10:00 - 19:00",
+        },
+        Object {
+          "day": "Środa",
+          "hours": "10:00 - 19:00",
+        },
+        Object {
+          "day": "Czwartek",
+          "hours": "10:00 - 19:00",
+        },
+        Object {
+          "day": "Piątek",
+          "hours": "10:00 - 19:00",
+        },
+        Object {
+          "day": "Sobota",
+          "hours": "brak danych",
+        },
+      ],
+      "id": 1,
+      "lat": "52.2351646",
+      "lng": "20.9942039",
+      "name": "Alsen",
+    },
+    Object {
+      "address": "Warszawa, al. Jana Pawła II 52/54",
+      "hours": Array [
+        Object {
+          "day": "Niedziela",
+          "hours": "24h",
+        },
+        Object {
+          "day": "Poniedziałek",
+          "hours": "24h",
+        },
+        Object {
+          "day": "Wtorek",
+          "hours": "24h",
+        },
+        Object {
+          "day": "Środa",
+          "hours": "24h",
+        },
+        Object {
+          "day": "Czwartek",
+          "hours": "24h",
+        },
+        Object {
+          "day": "Piątek",
+          "hours": "24h",
+        },
+        Object {
+          "day": "Sobota",
+          "hours": "24h",
+        },
+      ],
+      "id": 2,
+      "lat": "52.2446115",
+      "lng": "20.9919215",
+      "name": "Apteka1",
+    },
+  ],
+  "fetching": false,
+  "markers": Array [
+    Object {
+      "icon": "https://static.okazjum.pl/storage/okazjum/uploads/uploads/contractor/logo/6/s3_logo_alsen_siec-handlowa.jpg",
+      "id": 1,
+      "lat": "52.2351646",
+      "lng": "20.9942039",
+    },
+    Object {
+      "icon": "https://static.okazjum.pl/storage/okazjum/uploads/uploads/contractor/logo/120/s3_logo_apteka1_siec-handlowa.jpg",
+      "id": 2,
+      "lat": "52.2446115",
+      "lng": "20.9919215",
+    },
+  ],
+  "type": "FETCH_SUCCESS_ADDRESS",
+}
+`;
+
+exports[`synchronous map actions should create an click action to center map and highlight address on list 1`] = `
+Object {
+  "address": Object {
+    "address": "Warszawa, al. Jana Pawła II 52/54",
+    "hours": Array [
+      Object {
+        "day": "Niedziela",
+        "hours": "24h",
+      },
+      Object {
+        "day": "Poniedziałek",
+        "hours": "24h",
+      },
+      Object {
+        "day": "Wtorek",
+        "hours": "24h",
+      },
+      Object {
+        "day": "Środa",
+        "hours": "24h",
+      },
+      Object {
+        "day": "Czwartek",
+        "hours": "24h",
+      },
+      Object {
+        "day": "Piątek",
+        "hours": "24h",
+      },
+      Object {
+        "day": "Sobota",
+        "hours": "24h",
+      },
+    ],
+    "id": 2,
+    "lat": "52.2446115",
+    "lng": "20.9919215",
+    "name": "Apteka1",
+  },
+  "type": "CLICK_ADDRESS",
+}
+`;
